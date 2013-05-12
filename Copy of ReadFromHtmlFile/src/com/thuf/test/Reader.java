@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 public class Reader {
+	// THIS IS MY COMMIT :D :D :D
 	private static final String INPUT_FILE_NAME = "Problem1.html";
 	private static final String OUTPUT_FILE_NAME = "Problem1.txt";
 	private static final String CHARSET = "windows-1251";
