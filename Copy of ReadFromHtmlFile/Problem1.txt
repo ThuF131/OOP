@@ -1,0 +1,656 @@
+var _U = "undefined";
+var g_HttpRelativeWebRoot = "/ocom/";
+var SSContributor = false;
+var SSForceContributor = false;
+var SSHideContributorUI = false;
+var ssUrlPrefix = "/technetwork/";
+var ssUrlType = "2";
+var g_navNode_Path = new Array();
+g_navNode_Path[0] = 'otnen';
+g_navNode_Path[1] = 'otnen_java';
+var g_ssSourceNodeId = "otnen_java";
+var g_ssSourceSiteId = "otnen";
+var g_strLanguageId = "en";
+Oracle Technology Network for Java Developers
+--
+.logo_align{margin-bottom: 4px; margin-left:0px;}
+.search_position{margin:7px 3px 14px 16px;}
+#panelDiv_search .contentBg{padding:15px 5px 5px 5px; } 
+ul#navigation div.submenu {border-bottom:1px solid #b7b7b7;}
+ul#navigation div.submenu .bottomleft{background:none; width:15px; height:30px; float:left;  margin-left:-16px; margin-bottom:-42px; }
+ul#navigation div.submenu .bottomcenter{background:none; height:30px;  margin-left:15px; margin-right:15px; float:left; width:360px;} 
+ul#navigation div.submenu .bottomright{background:none; width:15px; height:30px; float:left; margin-left:360px; }
+ul#navigation div.submenu .partner_bottomleft{ background:none; width:15px; height:30px;  float:left; margin-left:-16px; margin-bottom:-42px; clear:left; margin-top:15px;}
+ul#navigation div.submenu .partner_bottomcenter{  background:none; width:362px; height:30px; margin-left:15px;  float:center;}
+ul#navigation div.submenu .partner_bottomright{  background:none; width:15px; height:30px; float:right; margin-right:-15px;}
+.highlight_tab{background: none;filter:progid:DXimageTransform.Microsoft.alphaimageloader(src='http://www.oracleimg.com/us/assets/subfeature-tab.png', sizingMethod='fixed');}
+.highlight_tabdivider{background: none;filter:progid:DXimageTransform.Microsoft.alphaimageloader(src='http://www.oracleimg.com/us/assets/subfeature-divider.png', sizingMethod='fixed');}
+.lightbox_overlay {display: none;position: absolute;background-color: black;z-index:1001;-moz-opacity: 0.6;opacity:.60;filter: alpha(opacity=60);overflow:auto;top: 0px;left: 0px;
+height:expression((document.documentElement.clientHeight
+.sunquicklinks_wrapper{DISPLAY: block; FLOAT: right; WIDTH: 200px; TEXT-ALIGN: right;}
+.welcomesignin_wrapper{FLOAT: left; WIDTH: 634px; TEXT-ALIGN: right;VERTICAL-ALIGN: bottom; PADDING-TOP: 12px}
+.logo_wrapper{DISPLAY: block; MARGIN-BOTTOM: 6px; float:left; WIDTH: 974px; HEIGHT: 40px;}
+.legalese {font-size:10px;font-family:arial,helvetica,sans-serif;}
+a.legalese:link {color:#000;text-decoration:none;}
+a.legalese:visited {color:#000;text-decoration:none;}
+a.legalese:hover {color:#FF0000;text-decoration:underline;}
+.profile{font-family:arial,elvetica,sans-serif;font-size:10px;color:#000;text-decoration:none;}
+.profile a:link{font-family:arial,helvetica,sans-serif;font-size:10px;color:#000;text-decoration:none;}
+.profile a:visited{font-family:arial,helvetica,sans-serif;font-size:10px;color:#000;text-decoration:none;}
+.profile a:hover{font-family:arial,helvetica,sans-serif;font-size:10px;color:#ff0000;text-decoration:underline;}
+OL,DL {margin-bottom:1px;}
+OL,DL,DT,DD {line-height:14px;}
+DD {margin-bottom:.5em;}
+#navigation{width:971px;}
+.sngPst DIV B {color:#ff0000;}
+.header{height:116px;}
+#breadCrumb .breadCrumb_Center .breadCrumb_Content .active{ font-weight:bold; color:#666666; font-size:13px;}
+window.onresize=function(e){
+document.getElementById("panelDiva").style.left = 0 +"px";
+}
+$(document).observe('dom:loaded', function() {
+$$('ul#navigation li').each(function(li){
+li.observe('mouseover', function(){
+li.addClassName('hover');
+});
+li.observe('mouseout', function(){
+li.removeClassName('hover');
+});
+});
+});
+if ( USER.guid )
+{
+document.write('Welcome ' + USER.firstname + ' (
+' + 'Account' + '
+|
+' + 'Help' + '
+|
+' + 'Sign Out' + '
+)');
+}
+else
+{
+document.write('
+( ' + '
+Sign In/Register for Account
+' + '
+|
+' + '
+Help
+' + ' )
+');
+}
+United States
+OTNWorldwideCountries('en');
+Communities
+Social Applications
+Oracle Blogs
+Oracle Discussion Forums
+Oracle Mix
+Oracle Wiki
+Oracle on Facebook
+Oracle on Google+
+Oracle on LinkedIn
+Oracle on Twitter
+Oracle on YouTube
+Networks
+Oracle ACEs
+Oracle PartnerNetwork
+Oracle Technology Network
+Oracle User Groups
+Support
+My Oracle Support Community
+I am a...
+Java Developer
+Database Admins and Developers
+System Admins and Developers
+Architect
+C-Level Executives
+Chief Financial Officer (CFO)
+Chief Information Officer (CIO)
+Other Roles
+Analyst
+Investor
+Job Seeker
+Partner
+Student
+Midsize Company
+I want to...
+Support
+Create or Update Service Request
+Search Support Knowledge Database
+Download Patches
+Education
+Find Oracle University Training
+Choose an Oracle Certification Path
+Partner
+Find a Partner Solution
+Access Software and Technical Support
+Attend a Partner-Only Event
+Attend Training
+Download Logos
+Manage Solutions Catalog
+Other Tasks
+Purchase Oracle Products Online
+Browse Oracle Documentation
+Search Oracle Documentation
+Check Oracle Earnings
+Check Oracle Price Lists
+Download Oracle Software
+Find an Oracle ACE
+View Oracle Benchmarks
+&nbsp;
+Filters:
+&nbsp;&nbsp;All
+&nbsp;&nbsp;Blogs
+&nbsp;&nbsp;Corporate Site
+&nbsp;&nbsp;Discussion Forums
+&nbsp;&nbsp;Documentation
+&nbsp;&nbsp;Training
+&nbsp;&nbsp;PartnerNetwork
+&nbsp;&nbsp;Technology Network
+Products and Services
+Products
+Oracle Database
+Engineered Systems
+Enterprise Manager
+Oracle Fusion Middleware
+Oracle Applications
+Java
+Servers
+Storage and Tape
+Development Tools
+Oracle On Demand
+Oracle CRM on Demand
+Products A-Z List
+Services
+Consulting
+Premier Support
+Advanced Customer Support
+Services
+Training
+Cloud Services
+Financing
+Oracle Customer Successes
+Partners
+Knowledge Zones
+Sales Kits
+Oracle Validated Integrations
+Acquisitions
+Sun
+BEA
+Hyperion
+JD Edwards EnterpriseOne
+PeopleSoft
+Primavera
+RightNow
+See All &hellip;
+Spotlight
+Cloud Computing
+Engineered Systems
+Enterprise Manager
+Fusion Applications
+Solutions
+Industry Solutions
+Communications
+Financial Services
+Healthcare
+High Technology
+Insurance
+Public Sector
+See All &hellip;
+Business Solutions
+Business Analytics
+Customer Experience
+Enterprise Performance Management
+Governance, Risk and Compliance
+For Midsize Companies
+See All &hellip;
+Cloud Solutions
+Technology Solutions
+Big Data
+Data Warehousing
+Java Technology
+Open Source
+Oracle Optimized Solutions
+Service-Oriented Architecture
+See All &hellip;
+Downloads
+Databases
+Database 11
+g
+Database 11
+g
+Release 2
+Express Edition
+MySQL
+Berkeley DB
+Instant Client
+Application Express
+See All &hellip;
+Middleware
+Fusion Middleware
+(incl. WebLogic Server)
+JRockit
+SOA Suite
+See All &hellip;
+Enterprise Management
+Enterprise Manager
+Application Testing Suite
+See All &hellip;
+Server and Storage Systems
+Solaris
+Linux and VM
+Firmware
+See All &hellip;
+Developer Tools
+SQL Developer
+JDeveloper and ADF
+Developer Tools for Visual Studio
+Enterprise Pack for Eclipse
+NetBeans IDE
+See All &hellip;
+Applications
+E-Business Suite,
+PeopleSoft, JD Edwards,
+Siebel CRM
+Agile
+Autovue
+See All &hellip;
+Popular Downloads
+Java for Developers
+Java for Your Computer
+JavaFX
+Oracle Solaris
+MySQL
+Fusion Middleware 11
+g
+Database 11
+g
+Pre-Built Developer VMs
+Free Open Source Software
+Partner Demo Software
+Store
+Database
+Oracle Database
+MySQL
+See All &hellip;
+Operating Systems and
+Infrastructure
+Linux
+Solaris
+Virtualization
+See All &hellip;
+Fusion Middleware
+Java
+Application Server and
+Application Grid
+See All &hellip;
+Applications
+AutoVue
+Crystal Ball
+Primavera
+See All &hellip;
+Servers
+Desktops
+Displays
+Peripherals
+See All &hellip;
+Storage and Tape
+Switches and Directors
+Host Bus Adapters
+See All &hellip;
+Networking Products
+Engineered Systems
+System Components
+Spare Parts
+Store Help
+Store FAQs
+Global Licensing Policies
+Price Lists
+Partner Store
+Hardware
+Software
+Support
+Support Services
+Oracle Premier Support
+Advanced Customer Support
+Services
+My Oracle Support
+Knowledgebase
+Community
+Patches and Updates
+Certifications
+Service Requests
+Welcome Center
+Acquired Company Support
+Global Support Contacts
+Critical Patch Updates and
+Security Alerts
+Customer Replaceable Units
+(CRU) Information
+Hardware Returns / Recycling
+License Codes
+Product Documentation
+Oracle Support Best Practices
+Software Security Assurance
+Technical Support Policies
+Lifetime Support Policy
+Partners
+Oracle Support
+Talk to a Partner Expert
+Training
+Course Schedule
+Training Formats
+Classroom
+Live Virtual
+Self-Study CD-ROM
+Training On Demand
+User Adoption Services
+See All &hellip;
+Learning Paths
+Training by Job Role
+Certification Program
+Become Certified
+Certification Paths
+Purchase a Voucher
+See All &hellip;
+Training Locations
+Contact Oracle University
+Partners
+Education and Enablement
+Knowledge Zones
+Partners
+Explore Specialized Partners
+Find an Oracle Partner
+Oracle Validated Integrations
+Find a Specialized Partner
+Why Partner
+Membership Resources
+Partner Levels
+Specialization Overview
+Become a Partner
+Knowledge Zones
+Do Business With Oracle
+Talk to a Partner Expert
+Partner-Only Events
+Partners
+(login required)
+Education and Enablement
+Sales Resources
+Pricing and Licensing
+Sales Kits
+Ordering Portal (POP)
+Marketing Resources
+Download Logos
+Manage Solutions Catalog
+Submit Success Story
+Marketing Kits
+Manage Membership
+Partner News and Events
+Partner Support
+Partner Developer Tools
+About
+Company Information
+Executives
+Board of Directors
+Corporate Citizenship Report
+Corporate Governance
+Oracle Insight
+Innovation
+History
+Careers
+Analyst Relations
+Investor Relations
+Acquisitions
+News and Events
+Events
+Newsroom
+Oracle Magazine
+Profit Magazine
+Oracle Newsletters
+Oracle Publishing
+Oracle Timeline
+Oracle Racing
+Oracle Customer Successes
+Partners
+Partner-Only Events
+Newsletters
+Spotlight
+Oracle Technology Network
+Resources for
+Java Developers
+Database Admins and
+Developers
+System Admins and Developers
+Architects
+Become a Member
+Downloads
+Database
+Oracle Fusion Middleware
+Oracle Enterprise Manager
+Developer Tools
+Java
+See All &hellip;
+Documentation
+Database
+Oracle Fusion Middleware
+Oracle Enterprise Manager
+Applications Technology
+Sun Documentation
+See All &hellip;
+Articles
+Learning Library
+Newsletters
+Events
+Pre-Built Developer VMs
+Technology Network Blog
+Discussion Forums
+Database and SQL
+Oracle Fusion Middleware
+Oracle Enterprise Manager
+Developer Tools
+Technology Network Feedback
+See All &hellip;
+Product Technical Info
+Oracle Database Enterprise Edition
+Oracle Fusion Middleware
+Oracle Enterprise Manager
+Applications Technology
+Developer Tools
+See All &hellip;
+Topics
+Big Data
+Cloud
+New to Java
+Security
+Virtualization
+See All &hellip;
+Sample Code
+Oracle Magazine
+Java Magazine
+Profit Magazine
+Oracle Wikis
+&nbsp;
+Oracle
+Technology Network
+Java
+Article
+Introducing Groovy
+Master the basics of Groovy, a general-purpose scripting language that runs on the Java Virtual Machine (JVM).
+Posted 7/12/12 &nbsp;//&nbsp; Tags:
+java
+,
+groovy
+,
+JVM
+&nbsp;//&nbsp;
+Headlines Archive
+Release
+NetBeans IDE 7.2
+This release provides new static code analysis capabilities in the Java Editor and smarter project scanning; JavaFX Scene Builder integration; support for multiple PHP frameworks; updated Groovy support; Java EE enhancements, and more.
+Posted 7/24/12 &nbsp;//&nbsp; Tags:
+java
+,
+NetBeans
+,
+IDE
+&nbsp;//&nbsp;
+Headlines Archive
+Event
+The JVM Language Summit
+The 2012 JVM Language Summit (July 30&ndash;August 1) brings together top Java Virtual Machine (JVM) language architects.
+Posted 7/24/12 &nbsp;//&nbsp; Tags:
+java
+,
+jvm
+,
+polyglot
+&nbsp;//&nbsp;
+Headlines Archive
+Software Downloads
+View All Downloads
+Top Downloads
+Java SE
+Java EE and GlassFish
+JavaFX
+Java ME
+JDeveloper 11
+g
+and ADF
+Enterprise Pack for Eclipse
+NetBeans IDE
+Pre-Built VM for Java Developers
+New Downloads
+NetBeans IDE 7.2
+Released 7/24/12
+Java Embedded Client 1.1
+Released 6/26/12
+Java SE 7 Update 5
+Released 6/12/12
+Java SE 6 Update 33
+Released 6/12/12
+JavaFX 2.1.1
+Released 6/12/12
+GlassFish 3.1.2
+Released 2/29/12
+Essential Links
+About Us/Become a Member
+Java APIs
+Technical Articles
+New to Java
+Java Certification &amp; Training
+Java Bug Database
+&quot;The Java Source&quot; Blog
+Java on Twitter
+Java Developer Newsletter
+Java Magazine
+Demos and Videos
+Delicious Feed
+java.net
+Java User Groups
+Java Champions
+Java Community Process
+Adopt A JSR
+Facebook
+|
+Forums
+Events
+|
+Developer Days
+Developer Spotlight
+Get Started (FAST!) With JavaFX 2 and Scene Builder
+What is Coming in EJB 3.2
+Project Jigsaw: Late for the Train
+JavaOne Toolkit Available
+O'Reilly's JavaEE 6 Pocket Guide
+Java Embedded @ JavaOne
+Java Training Beat
+JSR Updates: 340, 355, and 359
+NetBeans IDE 7.2 Release Candidate
+JVM Language Summit July 30-Aug 1
+JCP.next.3
+New Nokia SDK 2.0 for Java (beta)
+JavaOne Content Catalog Live
+JFXtras Project
+Native Packaging for JavaFX
+Java Developer Day Content On Demand
+NetBeans: Integrating a Progress Bar into a Wizard
+JDK7 Support in New Release of Oracle Berkeley DB
+The Java EE 7 Platform: Developing for the Cloud
+Blogs
+Untitled Document
+body {font-family:Arial, Helvetica, sans-serif}
+#blogsRSS {padding:0;position:absolute;top:3px;right:10px;}
+#blogsWrapper {padding:0 0 0px 0;background-color:#ffffff;}
+#blogsMain {padding:0px 0 0 0; margin: 0; font-size:12px; }
+#blogsMain a:link {color:#000;text-decoration:underline;} 
+#blogsMain a:visited {color:#999;text-decoration:underline;}
+#blogsMain a:hover {color:#ff0000;text-decoration:underline;}
+QotD: Roger Riggs on JSR 310 Integration
+Posted: Aug 3
+PodFodder: Jonathan Giles on JavaFX 2.2 UI Controls
+Posted: Aug 3
+Oracle Music Festival at this year's JavaOne 2012 conference
+Posted: Aug 1
+Make the Future Java!
+Posted: Aug 1
+Register for GlassFish Community Event and Party - JavaOne 2012
+Posted: Jul 31
+Help Design GlassFish T-shirt ?
+Posted: Jul 31
+Samsung Champ feature phone w/Java ME technology
+Posted: Jul 30
+On Vacation
+Posted: Jul 27
+QotD: Attila Szegedi on Dynalink 0.3
+Posted: Jul 26
+PodFodder: Jim Laskey on Nashorn JavaScript Engine In Java Spotlight Podcast
+Posted: Jul 26
+Technologies
+Java SE
+Java SE Support
+Java SE Advanced &amp; Suite
+Java Embedded
+Java EE
+Java ME
+JavaFX
+Java Card
+Java TV
+Java DB
+Developer Tools
+Get the Latest Java News with the Java Spotlight Podcast
+--
+Java Spotlight Podcast
+Untitled Document
+body {font-family:Arial, Helvetica, sans-serif}
+#blogsRSS {padding:0;position:absolute;top:3px;right:10px;}
+#blogsWrapper {padding:0 0 0px 0;background-color:#ffffff;}
+#blogsMain {padding:0px 0 0 0; margin: 0; font-size:12px; }
+#blogsMain a:link {color:#000;text-decoration:underline;} 
+#blogsMain a:visited {color:#999;text-decoration:underline;}
+#blogsMain a:hover {color:#ff0000;text-decoration:underline;}
+Java Spotlight Episode 92: Jim Laskey on Project Nashorn
+Posted: Jul 25
+Java Spotlight Episode 91: Marina Vatkina on EJB 3.2
+Posted: Jul 18
+Java Spotlight Episode 90: Mike Duigou on Project Lambda
+Posted: Jul 11
+Hardware and Software, Engineered to Work Together
+Subscribe
+About Oracle
+Careers
+Contact Us
+Site Maps
+Legal Notices
+Terms of Use
+Your Privacy Rights
+&nbsp;
+Oracle Mobile
+Facebook
+LinkedIn
+Twitter
+YouTube
+Oracle RSS Feed
+&nbsp;
+&nbsp;
